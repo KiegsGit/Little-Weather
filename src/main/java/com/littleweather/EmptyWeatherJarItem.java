@@ -7,6 +7,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -51,16 +52,23 @@ public class EmptyWeatherJarItem extends Item {
 			stack.shrink(1);
 			if (stack.isEmpty()) {
 				sp.setItemInHand(hand, filled);
-			} else if (!sp.getInventory().add(filled)) {
-				sp.drop(filled, false);
+			} else {
+				giveOrDrop(server, sp, filled);
 			}
-		} else if (!sp.getInventory().add(filled)) {
-			sp.drop(filled, false);
+		} else {
+			giveOrDrop(server, sp, filled);
 		}
 
 		playCaptureEffects(server, sp, kind);
 		sp.sendOverlayMessage(Component.translatable("message.littleweather.captured", new ItemStack(ModBlocks.itemFor(kind)).getHoverName()));
 		return InteractionResult.SUCCESS;
+	}
+
+	/** Puts the jar into the inventory, or drops it at the player's feet if the inventory is full. */
+	private static void giveOrDrop(ServerLevel server, ServerPlayer sp, ItemStack stack) {
+		if (!sp.getInventory().add(stack)) {
+			server.addFreshEntity(new ItemEntity(server, sp.getX(), sp.getY() + 0.5, sp.getZ(), stack));
+		}
 	}
 
 	private static void playCaptureEffects(ServerLevel server, ServerPlayer sp, JarKind kind) {
