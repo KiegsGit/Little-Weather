@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " W ",
+    "PAP",
+    "PPP"
+  ],
+  "key": {
+    "W": "#minecraft:planks",
+    "P": "minecraft:glass_pane",
+    "A": "minecraft:amethyst_shard"
+  },
+  "result": {
+    "id": "littleweather:empty_weather_jar",
+    "count": 1
+  }
+}

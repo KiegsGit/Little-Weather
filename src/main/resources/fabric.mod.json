@@ -1,0 +1,21 @@
+{
+	"schemaVersion": 1,
+	"id": "littleweather",
+	"version": "${version}",
+	"name": "Little Weather",
+	"description": "Capture a starry night, a rain cloud and a sunset in little glass jars, then display them around your home.",
+	"authors": ["Little Weather"],
+	"license": "MIT",
+	"icon": "assets/littleweather/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["com.littleweather.LittleWeatherMod"],
+		"client": ["com.littleweather.client.LittleWeatherClient"]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.0",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

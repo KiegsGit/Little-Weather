@@ -1,0 +1,17 @@
+{
+  "itemGroup.littleweather": "Little Weather",
+  "item.littleweather.empty_weather_jar": "Empty Weather Jar",
+  "item.littleweather.star_jar": "Star Jar",
+  "block.littleweather.star_jar": "Star Jar",
+  "item.littleweather.rain_jar": "Rain Jar",
+  "block.littleweather.rain_jar": "Rain Jar",
+  "item.littleweather.sunset_jar": "Sunset Jar",
+  "block.littleweather.sunset_jar": "Sunset Jar",
+  "message.littleweather.captured": "Captured a %s!",
+  "message.littleweather.need_overworld": "Weather jars only work in the Overworld.",
+  "message.littleweather.need_sky": "You need open sky above you to catch the weather.",
+  "message.littleweather.not_clear": "The sky isn't right for this spot. Wait for a clear sky, or for rain that falls here.",
+  "message.littleweather.stars_rising": "The stars are still coming out. Wait a little longer.",
+  "message.littleweather.daytime": "Nothing to catch yet. Try during rain, at sunset, or on a clear night.",
+  "message.littleweather.wrong_time": "The sky is changing. Try again in a moment."
+}

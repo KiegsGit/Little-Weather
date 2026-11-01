@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "littleweather:block/rain_jar"
+    }
+  }
+}
