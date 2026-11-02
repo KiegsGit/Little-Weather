@@ -64,7 +64,7 @@ jobs:
           # Only re-publish the SAME version's release (a re-run of this push). Other versions are never touched.
           gh release delete "v$VERSION" --yes --cleanup-tag || true
           gh release create "v$VERSION" build/libs/little-weather-$VERSION.jar \
-            --title "Little Weather v$VERSION" \
+            --title "Little-Weather V$VERSION" \
             --notes-file release-notes.md \
             --target "$SHA" \
             --latest

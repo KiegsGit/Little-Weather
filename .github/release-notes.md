@@ -2,9 +2,9 @@
   <img src="https://raw.githubusercontent.com/__REPO__/__SHA__/docs/header.png" width="640" alt="Little Weather">
 </p>
 
-# Little Weather v__VERSION__
+# Little-Weather V__VERSION__
 
-**Keep the sky in a jar.** Catch a starry night, a rain cloud and a sunset in little glass jars and display them around your home.
+**Keep the sky in a jar.** Catch a starry night, a rain cloud, a sunset, snowfall and a thunderstorm in little glass jars, then stand them on a shelf or hang them from the ceiling.
 
 ## What's new in v__VERSION__
 
@@ -28,9 +28,11 @@ __CHANGES__
 
 | Jar | How to catch it | Look |
 |---|---|---|
-| Star Jar | Clear night, open sky above you | Twinkling stars, brightest glow |
+| Star Jar | Clear night, open sky above you | Twinkling stars and a moon, brightest glow |
 | Rain Jar | Rain falling on your spot, open sky | Tiny cloud with falling drops |
-| Sunset Jar | Evening glow, open sky | Slowly shifting orange / pink swirl |
+| Sunset Jar | Evening glow, open sky | Slowly shifting orange / pink sky over little hills |
+| Snow Jar | Snowfall in a cold biome, open sky | Drifting flakes under a pale cloud |
+| Storm Jar | Thunderstorm, open sky | Dark cloud, driving rain and lightning |
 
 Craft an **Empty Weather Jar** (planks, glass panes, amethyst shard), hold it under the right sky and **right-click**.
 
