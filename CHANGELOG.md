@@ -3,6 +3,28 @@
 Newest first. Every update gets a new version number, an entry here, and its own release notes file
 (`.github/changes/<number>.md`), written as NEW / FIXED / CHANGES.
 
+## v2
+
+### NEW
+- **Snow Jar**: catch real snowfall in a cold biome. A tiny cloud with drifting flakes and a little snowy ground.
+- **Storm Jar**: catch a thunderstorm. A dark cloud, driving rain and a flash of lightning inside the jar.
+- **Hanging jars**: click the underside of a block to hang any jar from a twine loop, like a lantern. Click the top or side of a block to stand it up as before.
+- **New art**: all jars were redrawn at higher resolution with soft lighting. Real glass with an edge, reflections and bubbles, a cork, a satin bow, and smoothly animated contents: twinkling stars with a moon and shooting star, a drifting rain cloud, a sunset over silhouetted hills, falling snow, lightning.
+- **Custom sounds**: a soft glass chime and a cork pop when you catch the sky.
+- **Tooltips**: every jar tells you what it is.
+- **Advancements**: *A Jar for the Sky*, *Caught Something* and *Sky Collector* (own all five jars).
+- New ambient particles for snow and storms.
+
+### FIXED
+- Fixed the v1 build error: a jar is now dropped at your feet when your inventory is full instead of calling a method that no longer exists in 26.3.
+- Jars now need support: they can no longer float, and they drop as an item if the block under or above them is removed (this can take a moment).
+
+### CHANGES
+- Rain jars: a thunderstorm now gives a Storm Jar. Ordinary rain still gives a Rain Jar.
+- Jar models are slimmer and taller, with a shoulder, neck, lip, cork and ribbon.
+- Placed jars can only be put on or under a block that can carry them.
+- Capture sounds are now Little Weather's own.
+
 ## v1
 
 ### NEW

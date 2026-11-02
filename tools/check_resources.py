@@ -10,7 +10,7 @@ def need(path, why):
 def ref(r):  # "littleweather:block/x" -> "block/x"
     ns, _, p = r.partition(":") if ":" in r else ("minecraft", "", r)
     return ns, p
-blocks = ["star_jar", "rain_jar", "sunset_jar"]
+blocks = ["star_jar", "rain_jar", "sunset_jar", "snow_jar", "storm_jar"]
 items = blocks + ["empty_weather_jar"]
 lang = json.load(open(os.path.join(A, "lang", "en_us.json")))
 for n in items:
@@ -21,6 +21,9 @@ for n in items:
 for n in blocks:
     need(os.path.join(A, "blockstates", n + ".json"), "blockstate")
     need(os.path.join(A, "models", "block", n + ".json"), "block model")
+    need(os.path.join(A, "models", "block", n + "_hanging.json"), "hanging block model")
+    for line in ("1", "2"):
+        if f"lore.{NS}.{n}.{line}" not in lang: errors.append(f"lang key missing: lore.{NS}.{n}.{line}")
     need(os.path.join(D, "loot_table", "blocks", n + ".json"), "loot table")
     if f"block.{NS}.{n}" not in lang: errors.append(f"lang key missing: block.{NS}.{n}")
 need(os.path.join(D, "recipe", "empty_weather_jar.json"), "recipe")
@@ -48,6 +51,19 @@ for f in os.listdir(os.path.join(A, "particles")):
     for t in json.load(open(os.path.join(A, "particles", f)))["textures"]:
         ns, p = ref(t); need(os.path.join(A, "textures", "particle", p + ".png"), f"particle sprite for {f}")
 need(os.path.join(A, "icon.png"), "mod icon")
+for line in ("1", "2"):
+    if f"lore.{NS}.empty_weather_jar.{line}" not in lang: errors.append(f"lang key missing: lore.{NS}.empty_weather_jar.{line}")
+sounds = json.load(open(os.path.join(A, "sounds.json")))
+for name, ev in sounds.items():
+    for snd in ev["sounds"]:
+        ns, p = ref(snd); need(os.path.join(A, "sounds", p + ".ogg"), f"sound {name}")
+    if ev.get("subtitle") and ev["subtitle"] not in lang: errors.append(f"lang key missing: {ev['subtitle']}")
+for adv in os.listdir(os.path.join(D, "advancement")):
+    data = json.load(open(os.path.join(D, "advancement", adv)))
+    for key in (data["display"]["title"]["translate"], data["display"]["description"]["translate"]):
+        if key not in lang: errors.append(f"lang key missing: {key}")
+    if "parent" in data and data["parent"].startswith(NS + ":"):
+        need(os.path.join(D, "advancement", data["parent"].split(":")[1] + ".json"), f"parent of {adv}")
 mod = json.load(open(os.path.join(ROOT, "fabric.mod.json")))
 need(os.path.join(ROOT, mod["icon"]), "fabric.mod.json icon")
 if errors:
