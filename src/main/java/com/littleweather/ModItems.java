@@ -2,6 +2,7 @@ package com.littleweather;
 
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -16,7 +17,8 @@ public final class ModItems {
 
 	private static EmptyWeatherJarItem registerEmptyJar() {
 		ResourceKey<Item> key = ResourceKey.create(Registries.ITEM, LittleWeatherMod.id("empty_weather_jar"));
-		Item.Properties props = new Item.Properties().setId(key).stacksTo(16);
+		Item.Properties props = new Item.Properties().setId(key).stacksTo(16)
+			.component(DataComponents.LORE, ModBlocks.lore("empty_weather_jar"));
 		return Registry.register(BuiltInRegistries.ITEM, key, new EmptyWeatherJarItem(props));
 	}
 
@@ -27,7 +29,8 @@ public final class ModItems {
 
 	/** Every item of the mod, in tab order. */
 	private static Item[] all() {
-		return new Item[] {EMPTY_WEATHER_JAR, ModBlocks.STAR_JAR_ITEM, ModBlocks.RAIN_JAR_ITEM, ModBlocks.SUNSET_JAR_ITEM};
+		return new Item[] {EMPTY_WEATHER_JAR, ModBlocks.STAR_JAR_ITEM, ModBlocks.SUNSET_JAR_ITEM, ModBlocks.RAIN_JAR_ITEM,
+			ModBlocks.SNOW_JAR_ITEM, ModBlocks.STORM_JAR_ITEM};
 	}
 
 	/**

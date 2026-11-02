@@ -3,7 +3,6 @@ package com.littleweather;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -77,14 +76,18 @@ public class EmptyWeatherJarItem extends Item {
 			case STAR -> 16;
 			case RAIN -> 10;
 			case SUNSET -> 18;
+			case SNOW -> 14;
+			case STORM -> 10;
 		};
 		server.sendParticles(kind.particle(), p.x, p.y, p.z, count, 0.25, 0.25, 0.25, 0.02);
 		float pitch = switch (kind) {
-			case STAR -> 1.5f;
-			case RAIN -> 1.2f;
+			case STAR -> 1.25f;
+			case RAIN -> 1.05f;
 			case SUNSET -> 0.9f;
+			case SNOW -> 1.15f;
+			case STORM -> 0.75f;
 		};
-		server.playSound(null, p.x, p.y, p.z, SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.PLAYERS, 0.6f, pitch);
-		server.playSound(null, p.x, p.y, p.z, SoundEvents.BOTTLE_FILL, SoundSource.PLAYERS, 0.5f, 1.1f);
+		server.playSound(null, p.x, p.y, p.z, ModSounds.CORK_POP, SoundSource.PLAYERS, 0.6f, 1.0f);
+		server.playSound(null, p.x, p.y, p.z, ModSounds.CAPTURE_CHIME, SoundSource.PLAYERS, 0.7f, pitch);
 	}
 }

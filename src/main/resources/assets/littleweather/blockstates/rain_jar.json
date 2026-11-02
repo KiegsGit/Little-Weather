@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
+    "hanging=false": {
       "model": "littleweather:block/rain_jar"
+    },
+    "hanging=true": {
+      "model": "littleweather:block/rain_jar_hanging"
     }
   }
 }

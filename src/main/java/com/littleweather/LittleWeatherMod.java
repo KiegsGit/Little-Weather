@@ -18,6 +18,7 @@ public class LittleWeatherMod implements ModInitializer {
 	public void onInitialize() {
 		LittleWeatherConfig.load();
 		ModParticles.init();
+		ModSounds.init();
 		ModBlocks.init();
 		ModItems.init();
 		LOGGER.info("Little Weather loaded.");

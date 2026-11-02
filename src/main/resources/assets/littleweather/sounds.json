@@ -1,0 +1,10 @@
+{
+  "capture_chime": {
+    "subtitle": "subtitles.littleweather.capture_chime",
+    "sounds": ["littleweather:capture_chime"]
+  },
+  "cork_pop": {
+    "subtitle": "subtitles.littleweather.cork_pop",
+    "sounds": ["littleweather:cork_pop"]
+  }
+}

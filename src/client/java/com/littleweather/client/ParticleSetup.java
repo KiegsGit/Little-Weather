@@ -51,6 +51,8 @@ final class ParticleSetup {
 		reg(ModParticles.STAR_TWINKLE, 0.085f, 0.25f, 16);
 		reg(ModParticles.RAIN_DROP,    0.060f, 0.20f, 14);
 		reg(ModParticles.SUNSET_MOTE,  0.090f, 0.30f, 26);
+		reg(ModParticles.SNOW_FLAKE,   0.070f, 0.30f, 40);
+		reg(ModParticles.STORM_SPARK,  0.100f, 0.20f, 6);
 	}
 
 	private static void reg(SimpleParticleType type, float size, float jitter, int life) {

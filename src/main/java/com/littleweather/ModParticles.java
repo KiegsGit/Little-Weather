@@ -14,6 +14,11 @@ public final class ModParticles {
 	/** Soft orange/pink mote of sunset light. */
 	public static final SimpleParticleType SUNSET_MOTE = reg("sunset_mote");
 
+	/** Slow drifting snowflake. */
+	public static final SimpleParticleType SNOW_FLAKE = reg("snow_flake");
+	/** Tiny blue-white spark of a storm jar. */
+	public static final SimpleParticleType STORM_SPARK = reg("storm_spark");
+
 	private static SimpleParticleType reg(String name) {
 		return Registry.register(BuiltInRegistries.PARTICLE_TYPE, LittleWeatherMod.id(name), FabricParticleTypes.simple());
 	}

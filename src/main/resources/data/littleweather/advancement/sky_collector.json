@@ -1,0 +1,90 @@
+{
+  "parent": "littleweather:first_catch",
+  "display": {
+    "icon": {
+      "id": "littleweather:star_jar"
+    },
+    "title": {
+      "translate": "advancement.littleweather.sky_collector.title"
+    },
+    "description": {
+      "translate": "advancement.littleweather.sky_collector.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "star": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "littleweather:star_jar"
+          }
+        ]
+      }
+    },
+    "rain": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "littleweather:rain_jar"
+          }
+        ]
+      }
+    },
+    "sunset": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "littleweather:sunset_jar"
+          }
+        ]
+      }
+    },
+    "snow": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "littleweather:snow_jar"
+          }
+        ]
+      }
+    },
+    "storm": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "littleweather:storm_jar"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "star"
+    ],
+    [
+      "rain"
+    ],
+    [
+      "sunset"
+    ],
+    [
+      "snow"
+    ],
+    [
+      "storm"
+    ]
+  ],
+  "rewards": {
+    "experience": 60
+  }
+}

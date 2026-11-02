@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "littleweather:block/snow_jar"
+    },
+    "hanging=true": {
+      "model": "littleweather:block/snow_jar_hanging"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:story/root",
+  "display": {
+    "icon": {
+      "id": "littleweather:empty_weather_jar"
+    },
+    "title": {
+      "translate": "advancement.littleweather.empty_jar.title"
+    },
+    "description": {
+      "translate": "advancement.littleweather.empty_jar.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "jar": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "littleweather:empty_weather_jar"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "jar"
+    ]
+  ]
+}
